@@ -1,5 +1,5 @@
 NAME = fractol
-CC = cc
+CC = gcc-12
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 SRCS_DIR = srcs/
@@ -35,7 +35,7 @@ $(PRINTF):
 	@$(MAKE) -C $(PRINTF_DIR)
 
 $(MLX):
-	@$(MAKE) -C $(MLX_DIR)
+	@$(MAKE) CC=gcc-12 -C $(MLX_DIR)
 
 %.o: %.c
 	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
