@@ -22,21 +22,18 @@ Features:
 
 **Prerequisites:** MiniLibX must be installed on your system.
 
-On Linux:
+**Dependencies:**
 ```bash
-# Install MiniLibX dependencies
 sudo apt-get install libx11-dev libxext-dev libbsd-dev
-
-# Clone and build (MiniLibX sources included in the repo)
-git clone [your_repo] && cd [your_repo]
-make
 ```
 
-On macOS:
+**⚠️ GCC version:** If you encounter compilation errors with MiniLibX on Linux,
+your GCC version may be too recent (GCC 14+).
+The MiniLibX included in this repo is configured for GCC 12.
+
+To install GCC 12:
 ```bash
-# MiniLibX is available via the school machines or from sources
-git clone [your_repo] && cd [your_repo]
-make
+sudo apt install gcc-12
 ```
 
 **Run:**
